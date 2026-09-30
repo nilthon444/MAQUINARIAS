@@ -1,0 +1,239 @@
+Código CSS (style.css)
+CSS
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body, html {
+  height: 100%;
+  background-color: #f4f5f7;
+  color: #333;
+}
+
+/* CONTENEDOR PRINCIPAL CON IMAGEN DE FONDO (Maquinaria pesada) */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* Puedes reemplazar la URL por la imagen real de maquinaria de tu proyecto */
+  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), 
+              url('https://images.unsplash.com/photo-1579412690850-bd41cd0ca397?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  padding: 20px;
+}
+
+/* TARJETA DE LOGIN */
+.login-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  padding: 40px 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* AVATAR DE USUARIO */
+.avatar-icon {
+  width: 72px;
+  height: 72px;
+  background-color: #eef2f8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  color: #0b2559;
+  margin-bottom: 20px;
+}
+
+/* TÍTULOS */
+.login-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0b2559;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.title-underline {
+  width: 45px;
+  height: 3px;
+  background-color: #f5a623; /* Detalle en amarillo industrial */
+  border-radius: 2px;
+  margin-bottom: 28px;
+}
+
+/* FORMULARIO */
+.login-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a233a;
+  margin-bottom: 8px;
+}
+
+/* CAMPOS DE ENTRADA CON ICONOS */
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 12px 14px 12px 42px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  color: #333;
+}
+
+.input-container input::placeholder {
+  color: #9ca3af;
+}
+
+.input-container input:focus {
+  border-color: #0b2559;
+  box-shadow: 0 0 0 3px rgba(11, 37, 89, 0.1);
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 14px;
+  color: #6b7280;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* OPCIONES DEL FORMULARIO */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #374151;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.remember-me input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #0b2559;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.forgot-password {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* BOTÓN PRINCIPAL */
+.btnIngresar{
+  width: 100%;
+  background-color: #052659;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.btnIngresar:hover {
+  background-color: #021838;
+}
+
+/* DIVISOR */
+.divider {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+  line-height: 0.1em;
+  margin: 28px 0 20px 0;
+}
+
+.divider span {
+  background: #fff;
+  padding: 0 12px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* BOTÓN SSO */
+.btn-sso {
+  width: 100%;
+  background-color: #f3f4f6;
+  color: #0b2559;
+  border: 1px solid #e5e7eb;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-sso:hover {
+  background-color: #e5e7eb;
+}
+
+/* PIE DE PÁGINA (VERSIÓN) */
+.login-footer {
+  position: absolute;
+  bottom: 16px;
+  right: 24px;
+  color: #4b5563;
+  font-size: 13px;
+  font-weight: 500;
+}

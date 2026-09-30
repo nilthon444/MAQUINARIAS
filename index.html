@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión - Gestión de Maquinaria Pesada</title>
+  <link rel="stylesheet" href="estilo.css">
+  <!-- Iconos de FontAwesome via CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Fondo / Contenedor principal -->
+  <div class="login-wrapper">
+    
+    <!-- Tarjeta de Login -->
+    <div class="login-card">
+      
+      <!-- Icono de usuario superior -->
+      <div class="avatar-icon">
+        <i class="fa-regular fa-user"></i>
+      </div>
+
+      <!-- Título principal -->
+      <h1 class="login-title">Inicio de Sesión</h1>
+      <div class="title-underline"></div>
+
+      <!-- Formulario -->
+      <form class="login-form">
+        
+        <!-- Campo Usuario -->
+        <div class="form-group">
+          <label for="username">Usuario</label>
+          <div class="input-container">
+            <i class="fa-regular fa-user input-icon"></i>
+            <input type="text" id="username" name="username" placeholder="Ingrese su usuario" required>
+          </div>
+        </div>
+
+        <!-- Campo Contraseña -->
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <div class="input-container">
+            <i class="fa-solid fa-lock input-icon"></i>
+            <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+            <i class="fa-regular fa-eye-slash toggle-password" id="togglePassword" style="cursor: pointer;"></i>
+          </div>
+        </div>
+
+        <!-- Opciones de Recordar y Olvidó contraseña -->
+        <div class="form-options">
+          <label class="remember-me">
+            <input type="checkbox" name="remember">
+            <span>Recordarme</span>
+          </label>
+          <a href="#" class="forgot-password">¿Olvidó su contraseña?</a>
+        </div>
+
+        <!-- Botón Ingresar -->
+        <button type="submit" class="btnIngresar">
+          <!--button type="button" id="btnIngresar">Ingresar</button-->
+          <i class="fa-solid fa-right-to-bracket"></i>
+          Ingresar
+        </button>
+
+      </form>
+
+      <!-- Divisor -->
+      <div class="divider">
+        <span>o continuar con</span>
+      </div>
+
+      <!-- Botón SSO -->
+      <button type="button" class="btn-sso">
+        <i class="fa-solid fa-shield-halved"></i>
+        Iniciar sesión con SSO
+      </button>
+
+    </div>
+
+    <!-- Footer / Versión -->
+    <footer class="login-footer">
+      Versión 1.0.0
+    </footer>
+
+  </div>
+
+  <!-- Sincronización con JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

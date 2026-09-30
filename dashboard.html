@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Sistema de Gestión de Maquinaria Pesada</title>
+  <link rel="stylesheet"href="dashboard.css">
+  <!-- Iconos FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="dashboard-container">
+    
+    <!-- BARRA LATERAL (SIDEBAR) -->
+    <aside class="sidebar">
+      <div class="brand">
+        <i class="fa-solid fa-truck-monster brand-icon"></i>
+        <h2>Municipalidad de Ocobamba <span>v1.0</span></h2>
+      </div>
+
+      <nav class="sidebar-menu">
+        <ul>
+          <li class="active"><a href="#"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+          <li><a href="#"><i class="fa-solid fa-truck-moving"></i>Maquinaria</a></li>
+          <li><a href="#"><i class="fa-solid fa-screwdriver-wrench"></i> Mantenimiento</a></li>
+          <li><a href="#"><i class="fa-solid fa-clipboard-list"></i> Órdenes de Trabajo</a></li>
+          <li><a href="#"><i class="fa-solid fa-gas-pump"></i>Inspección</a></li>
+          <li> <a heref="#"><i class="fa-solid fa-clipboard-list"></i>Repuestos</a></li>
+          <li><a href="#"><i class="fa-solid fa-users"></i> Operadores</a></li>
+          <li><a href="#"><i class="fa-solid fa-file-invoice-dollar"></i> Reportes</a></li>
+          <li><a href="#"><i class="fa-solid fa-gear"></i> Configuración</a></li>
+        </ul>
+      </nav>
+
+      <div class="user-profile">
+        <div class="user-avatar">
+          <i class="fa-solid fa-user-check"></i>
+        </div>
+        <div class="user-info">
+          <h4>Milton Enriquez Rosales</h4>
+          <p>Jefe de Maquinaria</p>
+        </div>
+        <a href="#" class="logout-btn" title="Cerrar sesión"><i class="fa-solid fa-power-off"></i></a>
+      </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+      
+      <!-- ENCABEZADO SUPERIOR -->
+      <header class="top-header">
+        <div class="header-title">
+          <h1>Sistema Web de Gestion de Maquinaria Pesada</h1>
+          <p>Resumen general de la flota e intervenciones técnicas</p>
+        </div>
+
+        <div class="header-actions">
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Buscar por código, modelo o serie...">
+          </div>
+          <button class="btn-primary-action"><i class="fa-solid fa-plus"></i> Nueva Órden</button>
+          <div class="notification-icon">
+            <i class="fa-regular fa-bell"></i>
+            <span class="badge">3</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- TARJETAS DE INDICADORES (KPIS) -->
+      <section class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-icon bg-blue">
+            <i class="fa-solid fa-truck-pickup"></i>
+          </div>
+          <div class="kpi-data">
+            <h3>Flota Total</h3>
+            <span class="number">48</span>
+            <small class="text-success"><i class="fa-solid fa-arrow-up"></i> 2 agregadas este mes</small>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-icon bg-green">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <div class="kpi-data">
+            <h3>Operativas</h3>
+            <span class="number">38</span>
+            <small>79.1% de disponibilidad</small>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-icon bg-orange">
+            <i class="fa-solid fa-wrench"></i>
+          </div>
+          <div class="kpi-data">
+            <h3>En Mantenimiento</h3>
+            <span class="number">7</span>
+            <small class="text-warning">5 Preventivos / 2 Correctivos</small>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-icon bg-red">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+          </div>
+          <div class="kpi-data">
+            <h3>Inoperativas (Paradas)</h3>
+            <span class="number">3</span>
+            <small class="text-danger">Requiere atención urgente</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN INTERMEDIA: TABLA Y ALERTAS -->
+      <section class="dashboard-details">
+        
+        <!-- TABLA DE ESTADO DE MAQUINARIA -->
+        <div class="table-container">
+          <div class="card-header">
+            <h3>Estado de Maquinaria Principal</h3>
+            <a href="#" class="view-all">Ver todo</a>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Equipo / Modelo</th>
+                <th>Ubicación / Obra</th>
+                <th>Horómetro</th>
+                <th>Estado</th>
+                <th>Próx. Mantenimiento</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>EXC-001</strong></td>
+                <td>Excavadora CAT 336D</td>
+                <td>Mina San Cristóbal</td>
+                <td>4,250 hrs</td>
+                <td><span class="status active">Operativa</span></td>
+                <td>En 150 hrs</td>
+                <td><button class="btn-action"><i class="fa-solid fa-ellipsis-vertical"></i></button></td>
+              </tr>
+              <tr>
+                <td><strong>CAR-004</strong></td>
+                <td>Cargador Frontal WA470</td>
+                <td>Proyecto Autopista Sur</td>
+                <td>8,120 hrs</td>
+                <td><span class="status maintenance">Mantenimiento</span></td>
+                <td><span class="text-warning">En Proceso</span></td>
+                <td><button class="btn-action"><i class="fa-solid fa-ellipsis-vertical"></i></button></td>
+              </tr>
+              <tr>
+                <td><strong>TRACK-002</strong></td>
+                <td>Tractor D8T Komatsu</td>
+                <td>Cantera Central</td>
+                <td>12,400 hrs</td>
+                <td><span class="status stopped">Inoperativa</span></td>
+                <td><span class="text-danger">Urgente (Falla)</span></td>
+                <td><button class="btn-action"><i class="fa-solid fa-ellipsis-vertical"></i></button></td>
+              </tr>
+              <tr>
+                <td><strong>MOT-003</strong></td>
+                <td>Motoniveladora 140K</td>
+                <td>Proyecto Autopista Sur</td>
+                <td>3,890 hrs</td>
+                <td><span class="status active">Operativa</span></td>
+                <td>En 45 hrs</td>
+                <td><button class="btn-action"><i class="fa-solid fa-ellipsis-vertical"></i></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- PANEL LATERAL DE ALERTAS Y TAREAS PENDIENTES -->
+        <div class="alerts-container">
+          <div class="card-header">
+            <h3>Alertas de Servicio</h3>
+            <i class="fa-solid fa-bell text-warning"></i>
+          </div>
+
+          <div class="alert-list">
+            <div class="alert-item urgent">
+              <div class="alert-icon"><i class="fa-solid fa-oil-can"></i></div>
+              <div class="alert-content">
+                <h4>Cambio de Aceite de Motor</h4>
+                <p>Excavadora CAT 336D (EXC-001)</p>
+                <small>Superó las 250h de intervalo</small>
+              </div>
+            </div>
+
+            <div class="alert-item warning">
+              <div class="alert-icon"><i class="fa-solid fa-gauge-high"></i></div>
+              <div class="alert-content">
+                <h4>Alerta de Sobrecalentamiento</h4>
+                <p>Tractor D8T (TRACK-002)</p>
+                <small>Reportado por el operador a las 10:30 AM</small>
+              </div>
+            </div>
+
+            <div class="alert-item info">
+              <div class="alert-icon"><i class="fa-solid fa-calendar-check"></i></div>
+              <div class="alert-content">
+                <h4>Inspección Técnica Semanal</h4>
+                <p>5 Equipos programados para hoy</p>
+                <small>Taller Central</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>
